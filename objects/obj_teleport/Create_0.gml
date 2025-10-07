@@ -1,0 +1,1 @@
+botao_texto = "Ir para próxima sala";
