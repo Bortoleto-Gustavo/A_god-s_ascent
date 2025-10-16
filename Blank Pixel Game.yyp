@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"Blank Pixel Game",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -31,7 +31,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1400.0.901",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"Blank Pixel Game",
   "resources":[
@@ -101,6 +101,7 @@
     {"id":{"name":"Player1","path":"sprites/Player1/Player1.yy",},},
     {"id":{"name":"spr_boss_test","path":"sprites/spr_boss_test/spr_boss_test.yy",},},
     {"id":{"name":"spr_enemy_test","path":"sprites/spr_enemy_test/spr_enemy_test.yy",},},
+    {"id":{"name":"Sprite13","path":"sprites/Sprite13/Sprite13.yy",},},
     {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},},
