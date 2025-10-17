@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"Moon",
   "bboxMode":0,
   "bbox_bottom":0,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e4fd72cb-51ff-4ce8-8971-eb2951fa6e26","name":"e4fd72cb-51ff-4ce8-8971-eb2951fa6e26","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e4fd72cb-51ff-4ce8-8971-eb2951fa6e26","name":"e4fd72cb-51ff-4ce8-8971-eb2951fa6e26","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
