@@ -95,6 +95,7 @@
     {"id":{"name":"inimigo_manager","path":"scripts/inimigo_manager/inimigo_manager.yy",},},
     {"id":{"name":"queue_manager","path":"scripts/queue_manager/queue_manager.yy",},},
     {"id":{"name":"Death","path":"sprites/Death/Death.yy",},},
+    {"id":{"name":"Devil","path":"sprites/Devil/Devil.yy",},},
     {"id":{"name":"Fool","path":"sprites/Fool/Fool.yy",},},
     {"id":{"name":"Hermit","path":"sprites/Hermit/Hermit.yy",},},
     {"id":{"name":"Justice","path":"sprites/Justice/Justice.yy",},},
