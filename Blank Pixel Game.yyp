@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"Blank Pixel Game",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -31,7 +31,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1400.0.901",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"Blank Pixel Game",
   "resources":[
@@ -98,6 +98,7 @@
     {"id":{"name":"Fool","path":"sprites/Fool/Fool.yy",},},
     {"id":{"name":"Hermit","path":"sprites/Hermit/Hermit.yy",},},
     {"id":{"name":"Justice","path":"sprites/Justice/Justice.yy",},},
+    {"id":{"name":"Magician","path":"sprites/Magician/Magician.yy",},},
     {"id":{"name":"Moon","path":"sprites/Moon/Moon.yy",},},
     {"id":{"name":"Player1","path":"sprites/Player1/Player1.yy",},},
     {"id":{"name":"spr_boss_test","path":"sprites/spr_boss_test/spr_boss_test.yy",},},
