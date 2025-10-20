@@ -107,6 +107,7 @@
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},},
     {"id":{"name":"Sprite8","path":"sprites/Sprite8/Sprite8.yy",},},
+    {"id":{"name":"Star","path":"sprites/Star/Star.yy",},},
     {"id":{"name":"Sun","path":"sprites/Sun/Sun.yy",},},
   ],
   "resourceType":"GMProject",
