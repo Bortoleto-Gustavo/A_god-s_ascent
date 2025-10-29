@@ -94,6 +94,7 @@
     {"id":{"name":"dificuldade_manager","path":"scripts/dificuldade_manager/dificuldade_manager.yy",},},
     {"id":{"name":"inimigo_manager","path":"scripts/inimigo_manager/inimigo_manager.yy",},},
     {"id":{"name":"queue_manager","path":"scripts/queue_manager/queue_manager.yy",},},
+<<<<<<< HEAD
     {"id":{"name":"Death","path":"sprites/Death/Death.yy",},},
     {"id":{"name":"Earth","path":"sprites/Earth/Earth.yy",},},
     {"id":{"name":"Fool","path":"sprites/Fool/Fool.yy",},},
@@ -111,6 +112,19 @@
     {"id":{"name":"Star","path":"sprites/Star/Star.yy",},},
     {"id":{"name":"Sun","path":"sprites/Sun/Sun.yy",},},
     {"id":{"name":"Wheel","path":"sprites/Wheel/Wheel.yy",},},
+=======
+    {"id":{"name":"spr_Death","path":"sprites/spr_Death/spr_Death.yy",},},
+    {"id":{"name":"spr_Fool","path":"sprites/spr_Fool/spr_Fool.yy",},},
+    {"id":{"name":"spr_Hermit","path":"sprites/spr_Hermit/spr_Hermit.yy",},},
+    {"id":{"name":"spr_Justice","path":"sprites/spr_Justice/spr_Justice.yy",},},
+    {"id":{"name":"spr_Magician","path":"sprites/spr_Magician/spr_Magician.yy",},},
+    {"id":{"name":"spr_mainmenu","path":"sprites/spr_mainmenu/spr_mainmenu.yy",},},
+    {"id":{"name":"spr_Moon","path":"sprites/spr_Moon/spr_Moon.yy",},},
+    {"id":{"name":"spr_Player1","path":"sprites/spr_Player1/spr_Player1.yy",},},
+    {"id":{"name":"spr_Star","path":"sprites/spr_Star/spr_Star.yy",},},
+    {"id":{"name":"spr_Sun","path":"sprites/spr_Sun/spr_Sun.yy",},},
+    {"id":{"name":"spr_Wheel","path":"sprites/spr_Wheel/spr_Wheel.yy",},},
+>>>>>>> bd6a459e5e643be8220a8dc5427e38d32b25c5a1
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
