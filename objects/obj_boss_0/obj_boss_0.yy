@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Justice",
+    "path":"sprites/spr_Justice/spr_Justice.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
