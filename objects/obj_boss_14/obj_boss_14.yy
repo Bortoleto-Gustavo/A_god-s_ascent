@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Death",
+    "path":"sprites/spr_Death/spr_Death.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
