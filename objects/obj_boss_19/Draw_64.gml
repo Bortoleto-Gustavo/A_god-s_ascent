@@ -5,7 +5,7 @@ var _heart_y = 20;
 var _x_padding = 20;
 var _spacing = 4;
 var _gui_width = display_get_gui_width();
-var _heart_width_scaled = sprite_get_width(spr_heart_full) * _scale;
+var _heart_width_scaled = sprite_get_width(spr_heart_full_player) * _scale;
 var _heart_sep = _heart_width_scaled + _spacing;
 
 // Loop para desenhar os 10 corações (da direita para a esquerda)
@@ -23,11 +23,11 @@ for (var i = 0; i < hp_max; i++)
     
     if (i < _empty_hearts)
     {
-        _sprite_to_draw = spr_heart_empty;
+        _sprite_to_draw = spr_heart_empty_player;
     }
     else
     {
-        _sprite_to_draw = spr_heart_full;
+        _sprite_to_draw = spr_heart_full_player;
         
         // --- AQUI ESTÁ A MUDANÇA! ---
         // Usar a variável de animação do BOSS

@@ -2,7 +2,9 @@
 switch (state) {
 
     // --- ESTADO: PERSEGUINDO (CHASE) ---
-    case BOSS_STATE.CHASE:
+	
+	//MODIFICAR O STATE DE ACORDO COM SEU BOSS
+    case BOSS_STATE_HERMIT.CHASE:
         // (A sua lógica de 'sprite_index' antiga estava aqui)
         
         // --- Lógica de Perseguição ---
@@ -49,24 +51,30 @@ switch (state) {
         break;
 
     // --- ESTADO: ATACANDO (ATTACKING) ---
-    case BOSS_STATE.ATTACKING:
+    
+	//MODIFICAR DE ACORDO COM O NOME DO SEU BOSS
+	case BOSS_STATE_HERMIT.ATTACKING:
         // Parar de se mover enquanto ataca
         speed = 0; 
         
         // Troque 'spr_boss_attack' pelo nome do seu sprite de ataque
-        sprite_index = spr_Sun_down;
+		//COLOCAR O ESTADO NORMAL DO SEU BOSS(DE ACORDO COM O NOME DELE)
+        sprite_index = spr_hermit_down;
         break;
 
     // --- ESTADO: LEVANDO DANO (HIT) ---
-    case BOSS_STATE.HIT:
+	//MODIFICAR STATE DE ACORDO COM O NOME DO SEU BOSS
+    case BOSS_STATE_HERMIT.HIT:
         // Parar de se mover brevemente ao levar dano
         speed = 0;
         break;
 
     // --- ESTADO: MORTO (DEAD) ---
-    case BOSS_STATE.DEAD:
+	//MODIFICAR STATE DE ACORDO COM O NOME DO SEU BOSS
+    case BOSS_STATE_HERMIT.DEAD:
         // Troque 'spr_boss_dead' pelo seu sprite de morte (se tiver)
-        sprite_index = spr_sun_dano;
+		//COLOCAR UMA IMAGEM DO BOSS "MORTO"(DE ACORDO COM O NOME DO SEU BOSS)
+        sprite_index = spr_hermit_dano;
         speed = 0;
         
         // Aqui você pode adicionar efeitos, som de explosão, etc.
@@ -77,9 +85,11 @@ switch (state) {
 }
 
 // --- Verificação de Morte (checa a cada frame) ---
-if (hp <= 0 && state != BOSS_STATE.DEAD) {
+
+//MODIFICAR STATE DE ACORDO COM O NOME DO SEU BOSS
+if (hp <= 0 && state != BOSS_STATE_HERMIT.DEAD) {
     show_debug_message("Boss MORREU!");
-    state = BOSS_STATE.DEAD;
+    state = BOSS_STATE_HERMIT.DEAD;
     
     // Cancela todos os alarmes para não atacar enquanto morre
     alarm[0] = -1; 
@@ -122,7 +132,8 @@ if (instance_exists(obj_player) && obj_player.invincible == false)
 heart_anim_frame += heart_anim_speed;
 
 // Reinicia a animação quando ela chega ao fim
-if (heart_anim_frame >= sprite_get_number(spr_heart_full))
+//MODIFICAR A IMAGEM DE VIDA DE ACORDO COM SEU BOSS
+if (heart_anim_frame >= sprite_get_number(spr_heart_full_hermit))
 {
     heart_anim_frame = 0;
 }
