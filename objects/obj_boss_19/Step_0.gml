@@ -2,7 +2,7 @@
 switch (state) {
 
     // --- ESTADO: PERSEGUINDO (CHASE) ---
-    case BOSS_STATE.CHASE:
+    case BOSS_STATE_SUN.CHASE:
         // (A sua lógica de 'sprite_index' antiga estava aqui)
         
         // --- Lógica de Perseguição ---
@@ -49,7 +49,7 @@ switch (state) {
         break;
 
     // --- ESTADO: ATACANDO (ATTACKING) ---
-    case BOSS_STATE.ATTACKING:
+    case BOSS_STATE_SUN.ATTACKING:
         // Parar de se mover enquanto ataca
         speed = 0; 
         
@@ -58,13 +58,13 @@ switch (state) {
         break;
 
     // --- ESTADO: LEVANDO DANO (HIT) ---
-    case BOSS_STATE.HIT:
+    case BOSS_STATE_SUN.HIT:
         // Parar de se mover brevemente ao levar dano
         speed = 0;
         break;
 
     // --- ESTADO: MORTO (DEAD) ---
-    case BOSS_STATE.DEAD:
+    case BOSS_STATE_SUN.DEAD:
         // Troque 'spr_boss_dead' pelo seu sprite de morte (se tiver)
         sprite_index = spr_sun_dano;
         speed = 0;
@@ -77,9 +77,9 @@ switch (state) {
 }
 
 // --- Verificação de Morte (checa a cada frame) ---
-if (hp <= 0 && state != BOSS_STATE.DEAD) {
+if (hp <= 0 && state != BOSS_STATE_SUN.DEAD) {
     show_debug_message("Boss MORREU!");
-    state = BOSS_STATE.DEAD;
+    state = BOSS_STATE_SUN.DEAD;
     
     // Cancela todos os alarmes para não atacar enquanto morre
     alarm[0] = -1; 
@@ -122,7 +122,7 @@ if (instance_exists(obj_player) && obj_player.invincible == false)
 heart_anim_frame += heart_anim_speed;
 
 // Reinicia a animação quando ela chega ao fim
-if (heart_anim_frame >= sprite_get_number(spr_heart_full))
+if (heart_anim_frame >= sprite_get_number(spr_heart_full_player))
 {
     heart_anim_frame = 0;
 }

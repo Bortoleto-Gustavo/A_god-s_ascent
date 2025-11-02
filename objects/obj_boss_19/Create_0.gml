@@ -3,13 +3,13 @@ hp = 10;
 hp_max = 10;
 
 // --- Variáveis de Perseguição ---
-chase_speed = 3;  // Velocidade de perseguição (ajuste este valor)
+chase_speed = 5;  // Velocidade de perseguição (ajuste este valor)
 chase_range = 250;  // A distância máxima que o boss "enxerga" o player
 min_distance = 50; // A distância mínima que o boss tenta manter do player
 
 // --- Máquina de Estados (enum) ---
 // Define os "modos" que o boss pode ter
-enum BOSS_STATE {
+enum BOSS_STATE_SUN {
     CHASE,      // Perseguindo (ou parado se estiver longe)
     ATTACKING,  // Atacando
     HIT,        // Levando dano
@@ -25,7 +25,7 @@ sprite_movimento = [
     spr_Sun_down    // Índice 3
 ];
 // O estado inicial do boss é perseguir
-state = BOSS_STATE.CHASE;
+state = BOSS_STATE_SUN.CHASE;
 
 // --- Timers de Ataque ---
 // Define o primeiro ataque para daqui a 5 segundos (intervalo longo)
