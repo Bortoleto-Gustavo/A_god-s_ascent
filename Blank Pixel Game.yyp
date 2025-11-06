@@ -41,7 +41,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1400.0.901",
+    "IDEVersion":"2024.14.0.207",
   },
   "name":"Blank Pixel Game",
   "resources":[
@@ -111,6 +111,7 @@
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},
     {"id":{"name":"barra_vida_boss","path":"sprites/barra_vida_boss/barra_vida_boss.yy",},},
     {"id":{"name":"spr_Death","path":"sprites/spr_Death/spr_Death.yy",},},
+    {"id":{"name":"spr_earth","path":"sprites/spr_earth/spr_earth.yy",},},
     {"id":{"name":"spr_Fool","path":"sprites/spr_Fool/spr_Fool.yy",},},
     {"id":{"name":"spr_heart_empty_hermit","path":"sprites/spr_heart_empty_hermit/spr_heart_empty_hermit.yy",},},
     {"id":{"name":"spr_heart_empty_moon","path":"sprites/spr_heart_empty_moon/spr_heart_empty_moon.yy",},},
