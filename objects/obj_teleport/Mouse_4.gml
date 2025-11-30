@@ -1,1 +1,1 @@
-room_goto(andar_0);
+go_to_next_level();

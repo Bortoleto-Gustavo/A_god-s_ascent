@@ -6,8 +6,8 @@
   "name":"obj_inimigo_19",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Enemies",
+    "path":"folders/Objetos/Enemies.yy",
   },
   "parentObjectId":null,
   "persistent":false,

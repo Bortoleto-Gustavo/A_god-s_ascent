@@ -9,8 +9,8 @@
   "name":"obj_boss_ray",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_sun_attack",
-    "path":"folders/Objetos/obj_sun_attack.yy",
+    "name":"attacks",
+    "path":"folders/Objetos/attacks.yy",
   },
   "parentObjectId":null,
   "persistent":false,

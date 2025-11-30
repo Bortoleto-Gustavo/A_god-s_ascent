@@ -1,6 +1,4 @@
-// =============================================
 // FILA TAD - Implementação Completa
-// =============================================
 
 /// @function queue_create()
 function queue_create() {

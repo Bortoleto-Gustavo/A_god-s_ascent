@@ -19,6 +19,7 @@
   "height":900,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"b72ac47a-dd8e-49d4-b905-3c5bcef98f1c","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"b72ac47a-dd8e-49d4-b905-3c5bcef98f1c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"8b933a12-8ca2-4282-b42a-91d280c3a3a1","blendMode":0,"displayName":"default","isLocked":false,"name":"8b933a12-8ca2-4282-b42a-91d280c3a3a1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_mainmenu",
