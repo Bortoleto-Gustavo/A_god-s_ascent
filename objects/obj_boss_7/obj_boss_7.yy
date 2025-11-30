@@ -6,8 +6,8 @@
   "name":"obj_boss_7",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Bosses",
+    "path":"folders/Objetos/Bosses.yy",
   },
   "parentObjectId":null,
   "persistent":false,

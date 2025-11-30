@@ -2,7 +2,7 @@
 switch (state) {
 
     // --- ESTADO: PERSEGUINDO (CHASE) ---
-    case BOSS_STATE_SUN.CHASE:
+    case BOSS_STATE.CHASE:
         // (A sua lógica de 'sprite_index' antiga estava aqui)
         
         // --- Lógica de Perseguição ---
@@ -15,7 +15,7 @@ switch (state) {
                 direction = point_direction(x, y, obj_player.x, obj_player.y);
                 speed = chase_speed;
                 
-                // --- AQUI ESTÁ A NOVA LÓGICA DE ANIMAÇÃO ---
+                // --- LÓGICA DE ANIMAÇÃO ---
                 // Checar a direção (em graus) para escolher o sprite
                 
                 if (direction > 45 && direction <= 135) {
@@ -49,7 +49,7 @@ switch (state) {
         break;
 
     // --- ESTADO: ATACANDO (ATTACKING) ---
-    case BOSS_STATE_SUN.ATTACKING:
+    case BOSS_STATE.ATTACKING:
         // Parar de se mover enquanto ataca
         speed = 0; 
         
@@ -58,13 +58,13 @@ switch (state) {
         break;
 
     // --- ESTADO: LEVANDO DANO (HIT) ---
-    case BOSS_STATE_SUN.HIT:
+    case BOSS_STATE.HIT:
         // Parar de se mover brevemente ao levar dano
         speed = 0;
         break;
 
     // --- ESTADO: MORTO (DEAD) ---
-    case BOSS_STATE_SUN.DEAD:
+    case BOSS_STATE.DEAD:
         // Troque 'spr_boss_dead' pelo seu sprite de morte (se tiver)
         sprite_index = spr_sun_dano;
         speed = 0;
@@ -73,13 +73,14 @@ switch (state) {
         
         // Destruir o objeto do boss
         instance_destroy();
+		show_debug_message("Boss dewstruido");
         break;
 }
 
 // --- Verificação de Morte (checa a cada frame) ---
-if (hp <= 0 && state != BOSS_STATE_SUN.DEAD) {
+if (hp <= 0 && state != BOSS_STATE.DEAD) {
     show_debug_message("Boss MORREU!");
-    state = BOSS_STATE_SUN.DEAD;
+    state = BOSS_STATE.DEAD;
     
     // Cancela todos os alarmes para não atacar enquanto morre
     alarm[0] = -1; 
@@ -122,7 +123,7 @@ if (instance_exists(obj_player) && obj_player.invincible == false)
 heart_anim_frame += heart_anim_speed;
 
 // Reinicia a animação quando ela chega ao fim
-if (heart_anim_frame >= sprite_get_number(spr_heart_full_player))
+if (heart_anim_frame >= sprite_get_number(spr_heart_full))
 {
     heart_anim_frame = 0;
 }

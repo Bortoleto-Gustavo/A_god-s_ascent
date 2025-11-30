@@ -29,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Magician",
+    "path":"sprites/spr_Magician/spr_Magician.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

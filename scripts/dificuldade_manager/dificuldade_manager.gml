@@ -63,7 +63,7 @@ function get_boss_count_for_room(queue, room_index) {
         var multiplied_count = ceil(base_count * room_multiplier);
         
         // Boss geralmente é único, mas pode variar
-        multiplied_count = min(multiplied_count, 2); // máximo 2 bosses
+        multiplied_count = min(multiplied_count, 1); // máximo 2 bosses
         
         show_debug_message("Sala " + string(room_index) + ": " + string(multiplied_count) + " bosses (base: " + string(base_count) + " × " + string(room_multiplier) + ")");
         return multiplied_count;

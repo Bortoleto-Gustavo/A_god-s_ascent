@@ -8,8 +8,8 @@
   "name":"obj_queue",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Game control and dynamics",
+    "path":"folders/Objetos/Game control and dynamics.yy",
   },
   "parentObjectId":null,
   "persistent":true,

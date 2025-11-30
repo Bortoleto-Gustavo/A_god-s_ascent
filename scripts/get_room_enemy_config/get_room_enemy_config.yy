@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_room_enemy_config",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_room_enemy_config",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,1 @@
+heal = 5 - obj_player.hp;
