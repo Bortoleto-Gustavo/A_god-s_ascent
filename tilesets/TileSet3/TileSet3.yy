@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"sppr_tileset_andar_1",
-    "path":"sprites/sppr_tileset_andar_1/sppr_tileset_andar_1.yy",
+    "name":"sppr_tileset_andar_2",
+    "path":"sprites/sppr_tileset_andar_2/sppr_tileset_andar_2.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
