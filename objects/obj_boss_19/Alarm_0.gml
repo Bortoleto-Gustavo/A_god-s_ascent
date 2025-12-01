@@ -8,7 +8,7 @@ if (!instance_exists(obj_player)) {
 }
 
 // Mudar para o estado de ataque
-state = BOSS_STATE.ATTACKING;
+state =BOSS_STATE_SUN.ATTACKING;
 
 // --- Lógica do Ataque (1 Raio) ---
 var _ray_speed = 3; // Velocidade do raio (ajuste!)

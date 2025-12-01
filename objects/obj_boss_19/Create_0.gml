@@ -3,13 +3,13 @@ hp = 10;
 hp_max = 10;
 
 // --- Variáveis de Perseguição ---
-chase_speed = 3;  // Velocidade de perseguição (ajuste este valor)
+chase_speed = 1.5;  // Velocidade de perseguição (ajuste este valor)
 chase_range = 250;  // A distância máxima que o boss "enxerga" o player
 min_distance = 50; // A distância mínima que o boss tenta manter do player
 
 // --- Máquina de Estados (enum) ---
 // Define os "modos" que o boss pode ter
-enum BOSS_STATE {
+enum BOSS_STATE_SUN {
     CHASE,      // Perseguindo (ou parado se estiver longe)
     ATTACKING,  // Atacando
     HIT,        // Levando dano
@@ -25,7 +25,7 @@ sprite_movimento = [
     spr_Sun_down    // Índice 3
 ];
 // O estado inicial do boss é perseguir
-state = BOSS_STATE.CHASE;
+state = BOSS_STATE_SUN.CHASE;
 
 // --- Timers de Ataque ---
 // Define o primeiro ataque para daqui a 5 segundos (intervalo longo)
@@ -37,10 +37,10 @@ heart_anim_frame = 0;
 heart_anim_speed = 0.1; // (Use a mesma velocidade do player)
 
 function take_damage(amount) {
-    if (state == BOSS_STATE.HIT || state == BOSS_STATE.DEAD) return false;
+    if (state == BOSS_STATE_SUN.HIT || state ==BOSS_STATE_SUN.DEAD) return false;
     
     hp -= amount;
-    state = BOSS_STATE.HIT;
+    state = BOSS_STATE_SUN.HIT;
     image_alpha = 0.5;
     
     // Set hit recovery timer
@@ -51,7 +51,7 @@ function take_damage(amount) {
     show_debug_message("BOSS took " + string(amount) + " damage! HP: " + string(hp));
     
     if (hp <= 0) {
-        state = BOSS_STATE.DEAD;
+        state = BOSS_STATE_SUN.DEAD;
     }
     
     return true;

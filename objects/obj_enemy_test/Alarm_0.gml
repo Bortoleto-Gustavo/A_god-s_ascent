@@ -18,8 +18,8 @@ var _target_x = obj_player.x;
 var _target_y = obj_player.y;
 
 // 1. Criar o objeto do raio no centro (x, y) do boss
-// !!! TROQUE 'obj_boss_ray' PELO NOME DO SEU OBJETO DE RAIO !!!
-var _ray = instance_create_layer(x, y, "Instances", obj_boss_ray);
+
+var _ray = instance_create_layer(x, y, "Instances", obj_power_attack);
     
 // 2. Mirar o raio na posição salva do player
 with (_ray) {
