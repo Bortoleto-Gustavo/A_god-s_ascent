@@ -127,17 +127,17 @@ if (keyboard_check_pressed(vk_space) && !_is_attacking) {
         var _dist = point_distance(x, y, obj_boss_19.x, obj_boss_19.y);
         
         if (_dist < _attack_range) {
-            if (obj_boss_19.state != BOSS_STATE.HIT && obj_boss_19.state != BOSS_STATE.DEAD) {
+            if (obj_boss_19.state != BOSS_STATE_SUN.HIT && obj_boss_19.state !=BOSS_STATE_SUN.DEAD) {
                 obj_boss_19.hp -= short_damage;
-                obj_boss_19.state = BOSS_STATE.HIT;
+                obj_boss_19.state = BOSS_STATE_SUN.HIT;
                 obj_boss_19.image_alpha = 0.5;
                 obj_boss_19.alarm[2] = room_speed * 0.2;
                 show_debug_message("Boss levou dano! HP: " + string(obj_boss_19.hp));
             }
         } else if (_dist < _limit_attack_range) {
-            if (obj_boss_19.state != BOSS_STATE.HIT && obj_boss_19.state != BOSS_STATE.DEAD) {
+            if (obj_boss_19.state != BOSS_STATE_SUN.HIT && obj_boss_19.state != BOSS_STATE_SUN.DEAD) {
                 obj_boss_19.hp -= long_damage;
-                obj_boss_19.state = BOSS_STATE.HIT;
+                obj_boss_19.state = BOSS_STATE_SUN.HIT;
                 obj_boss_19.image_alpha = 0.5;
                 obj_boss_19.alarm[2] = room_speed * 0.2;
                 show_debug_message("Boss levou dano! HP: " + string(obj_boss_19.hp));
@@ -229,8 +229,28 @@ if (keyboard_check_pressed(vk_space) && !_is_attacking) {
             }
         }
     }
+	if (instance_exists(obj_inimigo_0)) {
+        var _dist = point_distance(x, y,obj_inimigo_0.x, obj_inimigo_0.y);
+        
+        if (_dist < _attack_range) {
+            if (obj_inimigo_0.state != ENEMY0_STATE.HIT && obj_inimigo_0.state !=ENEMY0_STATE.DEAD) {
+                obj_inimigo_0.hp -= short_damage;
+               obj_inimigo_0.state =ENEMY0_STATE.HIT;
+               obj_inimigo_0.image_alpha = 0.5;
+                obj_inimigo_0.alarm[2] = room_speed * 0.2;
+                show_debug_message("Boss levou dano! HP: " + string(obj_inimigo_0.hp));
+            }
+        } else if (_dist < _limit_attack_range) {
+            if (obj_inimigo_0.state != ENEMY0_STATE.HIT && obj_inimigo_0.state !=ENEMY0_STATE.DEAD) {
+               obj_inimigo_0.hp -= long_damage;
+               obj_inimigo_0.state = ENEMY0_STATE.HIT;
+                obj_inimigo_0.image_alpha = 0.5;
+               obj_inimigo_0.alarm[2] = room_speed * 0.2;
+                show_debug_message("Boss levou dano! HP: " + string(obj_boss_1.hp));
+		}
+	}
 }
-
+}
 
 
 // --- 3. APLICAR MOVIMENTO ---
@@ -289,4 +309,48 @@ if (keyboard_check_pressed(ord("I"))) {
 // DEBUG
 if (hp < 0) {
     show_debug_message("CRITICAL: HP is negative! HP: " + string(hp) + ", Invincible: " + string(invincible));
+}
+// --------------------------------------------------------
+// --- 2.5 PROCESSAR ATAQUE DE PODER (Tecla C) ---
+// --------------------------------------------------------
+// Mudamos de mouse_check_button_pressed(mb_left) para keyboard_check_pressed(ord("C"))
+if (keyboard_check_pressed(ord("C")) && !_is_attacking) 
+{
+    // 1. Configurar estado de ataque (Trava o movimento)
+    _is_attacking = true;
+    velocidade_x = 0;
+    velocidade_y = 0;
+    
+    // 2. Tempo da animação
+    alarm[1] = room_speed * 0.4; 
+    
+    // 3. Definir Sprite (Use o de magia se tiver, ou o de ataque normal)
+    sprite_index = spr_jogador_down; 
+    
+    image_index = 0;
+    image_speed = 1;
+
+    // 4. CRIAR O PROJÉTIL
+    var _poder = instance_create_layer(x, y, "Instances", obj_player_power_attack);
+    
+    // 5. Definir a DIREÇÃO do tiro baseada na 'face' do jogador
+    if (face == Right) {
+        _poder.direction = 0;      // Direita
+        _poder.image_angle = 0;
+    } 
+    else if (face == Up) {
+        _poder.direction = 90;     // Cima
+        _poder.image_angle = 90;
+    } 
+    else if (face == Left) {
+        _poder.direction = 180;    // Esquerda
+        _poder.image_angle = 180;
+    } 
+    else if (face == Down) {
+        _poder.direction = 270;    // Baixo
+        _poder.image_angle = 270;
+    }
+    
+    // Definir a velocidade do projétil
+    _poder.speed = 8; 
 }
