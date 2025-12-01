@@ -5,9 +5,9 @@ if (hit_confirmed == false)
     if (variable_instance_exists(other, "take_damage")) {
         other.take_damage(damage);
     } else {
-        if (other.state != MOON_STATE.HIT && other.state != MOON_STATE.DEAD) {
+        if (other.state != HANG_STATE.HIT && other.state != HANG_STATE.DEAD) {
             other.hp -= damage;
-            other.state =  MOON_STATE.HIT;
+            other.state =  HANG_STATE.HIT;
             other.image_alpha = 0.5;
             other.alarm[2] = room_speed * 0.2;
         }
